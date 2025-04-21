@@ -1,0 +1,22 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+	<PropertyGroup>
+		<TargetFramework>net9.0</TargetFramework>
+		<OutputType>Exe</OutputType>
+		<Nullable>enable</Nullable>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<InvariantGlobalization>true</InvariantGlobalization>
+		<PublishAot>true</PublishAot>
+	</PropertyGroup>
+
+	<PropertyGroup Condition="$(RuntimeIdentifier.StartsWith('win'))">
+		<TargetFramework>net9.0-windows</TargetFramework>
+		<SupportedOSPlatformVersion>5.1</SupportedOSPlatformVersion>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Lyricify.Lyrics.Helper-NativeAot" Version="0.1.4-alpha.5" />
+		<PackageReference Include="VC-LTL" Version="5.2.2-Beta1" />
+	</ItemGroup>
+
+</Project>
